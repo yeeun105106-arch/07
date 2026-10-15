@@ -1,18 +1,17 @@
 #include <stdio.h>
 
 
-int main(void)
-{
-    int flag = 1;
-    int y;
-    
-    while(flag != 0)
-    {
-        y = 3;
-        flag = 0;
-    }
+int main(void) 
+{ 
+    int i;
 
-    y=4;
+    for (i=0; i<5; i++)
+    {
+        static int temp = 1;
+        
+        printf("temp = %d\n", temp);
+        temp++;
+    }
 
     return 0;
 }
